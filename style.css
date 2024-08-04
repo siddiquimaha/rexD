@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    border-radius: 0.5rem;
+}
+#header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+/* .nav{
+    width: 100%;
+    padding: 5px;
+} */
+
+.logo-img{
+    height: 50px;
+    width: 100px;
+}
+.logo{
+    height: 60px;
+    width: 150px;
+}
+li{
+    list-style-type: none;
+    margin-right: 30px;
+}
+ul li a{
+    text-decoration: none;
+    color: #00000080;
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+}
+ul li a::after{
+    color: #00000080;
+    content: '';
+    width: 0;
+    height: 3px;
+    /* background: #ff004f; */
+    background: linear-gradient(to right, red , black);
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    transition: 0.5s;
+}
+ul li a:hover{
+    color: #00000080;
+}
+ul li a:hover::after{
+    width: 100%;
+}
+
+a.quote-btn{
+    color: #ffffff;
+    font-size: 15px;
+    background-color: #F55951;text-decoration: none;
+    width: 130px;
+}
+
+div.line{
+    border-right: 2px solid #88818180;
+    height: 40px;
+    position: relative;
+}
+.container h1 span {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    text-decoration: underline;
+}
+/* content section */
+#content{
+    /* padding-bottom: 20px; */
+    padding: 10px;
+}
+.text-btn{
+    font-size: 18px;
+    color: #000000;
+    font-weight: bold;
+    border-radius: 1rem;
+
+}
+div.quote{
+    width: 200px;
+    border: 1px solid rgb(192, 186, 186);
+    background-color: #ffffff;
+    transition: 0.5s;
+}
+div.quote:hover{
+    background-color: rgb(248, 244, 244);
+    color: black;
+    transform: translate(-5px);
+    animation: moveRight 5s;
+}
+div.icon i{
+    font-size: large;
+}
+.quote-btnpara{
+    font-size: 20px;
+    color: #00000080;
+}
+.main-img img{
+    /* transition: 0.5s; */
+    animation: upDown 3s infinite alternate;
+}
+
+/* card section */
+#card-section{
+    background-image: url(assets/back5.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border: 2px salmon;
+
+}
+.card{
+    color: #00000080;
+    height: 430px;
+    width: 22rem;
+    transition: transform 0.3s, background-color 0.3s;
+    border-radius: 1rem;
+    border: none;
+    margin-bottom: 1rem;
+}
+.card-title{
+    color: #000000;
+    font-weight: 900;
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.card-img{
+    height: 60%;
+}
+.card-img img{
+    width: 70%;
+}
+
+
+.card:hover {
+    transform: translateY(-4px);
+    background-color: white;
+    z-index: 1;
+}
+
+#card-section:hover .card {
+    background-color: transparent;
+    border: none;
+}
+
+#card-section .card:hover {
+    background-color: #ffffff;
+}
+/* number-counter */
+#num{
+    height: auto;
+    background-color: #ffffff;
+    padding-top: 20px;
+}
+.num-head{
+    font-size: 45px;
+    font-weight: 800;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.num-para{
+    color: #00000080;
+    font-size: 18px;
+}
+.counter{
+    font-size: 70px;
+    font-weight: 800;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* support section */
+#support{
+    /* background-image: url(assets/support.jpeg); */
+    background-color: rgb(248, 246, 246);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+#support p{
+    color: #00000080;
+}
+#support h1{
+    font-size: 3rem;
+    padding-top: 20px;
+    font-weight: 800;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#support h2{
+    font-size: 1.5rem;
+    padding-top: 20px;
+    /* font-weight: 800; */
+}
+div.lead{
+    margin-top: 30px;
+}
+.container{
+    margin-top: 50px;
+}
+div.support-icon i{
+    font-size: 50px;
+}
+.translate-y{
+    transform: translateY(0);
+    transition: transform 0.5s ease-out;
+}
+.translate-y.scrolled {
+    transform: translateY(10px); /* Reset transform on hover if desired */
+}
+/* contact section */
+#contact{
+    background-color: rgb(219, 213, 213);
+}
+.form-btn{
+    background: linear-gradient(to right, red , black);
+    color: white;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 18px;
+    margin-top: 20px;
+}
+form input,textarea{
+    background-color: rgb(230, 223, 223);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    width: 100%;
+}
+form textarea{
+    min-height: 150px;
+}
+#contact p{
+    color: #00000080;
+}
+/* #contact.container{
+    padding: 50px;
+} */
+/* footer */
+.social-icons > div{
+    margin-right: 15px;
+}
+.social-icons > div >i {
+    font-size: 1.5rem;
+    color: gray;
+    background-color: white;
+}
+.foot-logo > img{
+    width: 35%;
+}
+.logo-col > p{
+    color: #00000080;
+}
+
+/* Contact Page */
+#con-head{
+    height: 600px;
+    background-image: url(assets/contactBack.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.visits{
+    background-color: rgb(250, 244, 244);
+}
+.row-visits{
+    gap: 10px;
+}
+.row-visits > .col {
+    border-radius: 1rem;
+}
+.visits-col:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff; /* Change background color on hover */
+}
+
+
+
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50px);
+    }
+}
+
+@media (max-width: 768px) {
+    #content h1, #content .quote-btnpara, #content .icon i, #content .button a {
+        font-size: 1rem; /* Consistent font size for smaller screens */
+    }
+    .quote-btn {
+        display: flex; /* Ensure buttons stay in line */
+        flex-direction: row;
+        gap: 1rem; /* Add space between buttons */
+    }
+    .main-img img {
+        width: 100%; /* Make sure image scales well */
+        height: 100%;
+    }
+    #card-section .card{
+        width: 13rem;
+    }
+    #num .num-head{
+        font-size: 1.5rem !important; /* Adjusted size to be noticeable */
+        font-weight: bold !important;
+    }
+    #support h1{
+        font-size: 1.7rem;
+        padding-top: 20px;
+        font-weight: 600;
+    }
+    .footerb .col-8{
+        margin-top: 30px;
+    }
+    .foot-logo > img{
+        width: 100%;
+        margin-top: 0;
+    }
+
+
+}
+
